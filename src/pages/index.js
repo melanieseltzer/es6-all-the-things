@@ -2,12 +2,14 @@ import React from 'react';
 import Link from 'gatsby-link';
 
 import Menu from '../components/menu';
-import Snippets from '../components/snippets';
+import Snippet from '../components/snippet';
 
 const IndexPage = () => (
   <div className="columns">
     <Menu />
-    <Snippets />
+    <div className="column is-9">
+      <Snippet category="New Variables" />
+    </div>
   </div>
 );
 
