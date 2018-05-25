@@ -5,7 +5,7 @@ import fontawesome from '@fortawesome/fontawesome';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faInfoCircle from '@fortawesome/fontawesome-free-solid/faInfoCircle';
 
-import snippets from '../data';
+import data from '../data';
 
 fontawesome.library.add(faInfoCircle);
 
@@ -15,7 +15,7 @@ class Snippet extends Component {
   }
   renderSnippet({ title, slug, info, code } = snippet) {
     return (
-      <div className="box">
+      <div className="box" key={title}>
         <h4 id={slug} className="title is-3">
           {title}
         </h4>
@@ -36,7 +36,7 @@ class Snippet extends Component {
     return (
       <div className="content is-medium">
         <h3 className="title is-3">{this.props.category}</h3>
-        {snippets
+        {data
           .filter(snippet => snippet.category === this.props.category)
           .map(snippet => this.renderSnippet(snippet))}
       </div>

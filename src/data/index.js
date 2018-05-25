@@ -1,4 +1,4 @@
-const snippets = [
+const data = [
   {
     title: 'const',
     slug: 'const',
@@ -15,4 +15,4 @@ const snippets = [
   },
 ];
 
-export default snippets;
+export default data;
