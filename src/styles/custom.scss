@@ -1,0 +1,71 @@
+// Custom code
+$grey-lighter: hsl(0, 0%, 95%);
+$box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.2);
+$menu-item-hover-background-color: hsl(0, 0%, 85%);
+
+body {
+  border-top: 10px solid salmon;
+  border-bottom: 10px solid salmon;
+  border-left: 0;
+  border-right: 0;
+  border-image: linear-gradient(to right, #00d1b2, salmon) 1 stretch;
+}
+
+body,
+html {
+  background: $grey-lighter;
+}
+
+pre,
+.message {
+  max-width: 960px;
+}
+
+// Hero
+.hero.is-primary {
+  background: linear-gradient(to left, #da4453, #89216b);
+}
+
+.is-centered {
+  text-align: center;
+}
+
+// Kicks in only when nav becomes fixed
+.fixed {
+  max-height: calc(100vh - 10px);
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+// Font Awesome
+.box span.icon {
+  float: right;
+  font-size: 1.7em;
+  padding: 2rem 2rem 0 0;
+}
+
+.fa-js {
+  font-size: 7em;
+}
+
+.fa-code {
+  font-size: 5em;
+  margin-left: 0.2em;
+}
+
+// Fixes for Prisma/Bulma class conflict
+.token.number {
+  display: inline;
+  padding: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: inherit;
+  vertical-align: inherit;
+  border-radius: inherit;
+  font-weight: inherit;
+  white-space: inherit;
+  background: inherit;
+  margin: inherit;
+}
