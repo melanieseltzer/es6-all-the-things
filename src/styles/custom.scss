@@ -4,11 +4,10 @@ $box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.2);
 $menu-item-hover-background-color: hsl(0, 0%, 85%);
 
 body {
-  border-top: 10px solid salmon;
-  border-bottom: 10px solid salmon;
+  border-top: 10px solid #efd84e;
+  border-bottom: 10px solid #efd84e;
   border-left: 0;
   border-right: 0;
-  border-image: linear-gradient(to right, #00d1b2, salmon) 1 stretch;
 }
 
 body,
@@ -41,9 +40,9 @@ pre,
 
 // Font Awesome
 .box span.icon {
-  float: right;
+  float: left;
   font-size: 1.7em;
-  padding: 2rem 2rem 0 0;
+  padding: 2rem 1em 0 1.5em;
 }
 
 .fa-js {

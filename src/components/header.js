@@ -4,10 +4,9 @@ import Link from 'gatsby-link';
 import fontawesome from '@fortawesome/fontawesome';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faJs from '@fortawesome/fontawesome-free-brands/faJs';
-import faGithub from '@fortawesome/fontawesome-free-brands/faGithub';
 import faCode from '@fortawesome/fontawesome-free-solid/faCode';
 
-fontawesome.library.add(faJs, faGithub, faCode);
+fontawesome.library.add(faJs, faCode);
 
 const Header = ({ siteTitle }) => (
   <section className="hero is-medium is-primary">
@@ -24,14 +23,23 @@ const Header = ({ siteTitle }) => (
               Collection of ES6 goodies for next-level dev 🤓💻
             </h3>
             <a
-              href="https://github.com/melanieseltzer/es6-all-the-things"
-              target="_blank"
-              className="button is-primary is-large"
+              className="github-button"
+              href="https://github.com/melanieseltzer"
+              data-size="large"
+              aria-label="Follow @melanieseltzer on GitHub"
             >
-              <span className="icon">
-                <FontAwesomeIcon icon={['fab', 'github']} />
-              </span>
-              <span>Github</span>
+              Follow
+            </a>{' '}
+            &nbsp;
+            <a
+              className="github-button"
+              href="https://github.com/melanieseltzer/es6-all-the-things"
+              data-icon="octicon-star"
+              data-size="large"
+              data-show-count="false"
+              aria-label="Star melanieseltzer/es6-all-the-things on GitHub"
+            >
+              Star
             </a>
           </div>
         </div>

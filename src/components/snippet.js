@@ -16,11 +16,11 @@ class Snippet extends Component {
   renderSnippet({ title, slug, info, code } = snippet) {
     return (
       <div className="box" key={title}>
-        <h4 id={slug} className="title is-3">
+        <h4 id={slug} className="title is-4">
           {title}
         </h4>
-        <article className="message is-primary">
-          <span className="icon has-text-primary">
+        <article className="message is-warning">
+          <span className="icon has-text-warning">
             <FontAwesomeIcon icon="info-circle" />
           </span>
           <div className="message-body">{info}</div>
