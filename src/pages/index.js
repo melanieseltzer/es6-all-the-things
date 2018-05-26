@@ -12,25 +12,27 @@ const categories = [...new Set(data.map(({ category }) => category))];
 const uniqueCategories = Array.from(...categories);
 
 class IndexPage extends Component {
-  renderMenu(category) {
-    return <Menu key={category} category={category} />;
-  }
-
-  renderSnippet(category) {
-    return <Snippet key={category} category={category} />;
-  }
+  renderElement = (element, category) => {
+    if (element === 'Menu') {
+      return <Menu key={category} category={category} />;
+    } else {
+      return <Snippet key={category} category={category} />;
+    }
+  };
 
   render() {
     return (
       <div className="columns">
         <div className="column is-3">
           <aside className="is-medium menu">
-            {uniqueCategories.map(menu => this.renderMenu(menu))}
+            {uniqueCategories.map(menu => this.renderElement('Menu', menu))}
           </aside>
         </div>
 
         <div className="column is-9">
-          {uniqueCategories.map(snippet => this.renderSnippet(snippet))}
+          {uniqueCategories.map(snippet =>
+            this.renderElement('Snippet', snippet)
+          )}
         </div>
       </div>
     );
