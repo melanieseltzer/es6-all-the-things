@@ -28,7 +28,7 @@ const data = [
     slug: 'default-function-arguments',
     info: 'Sets the default argument if nothing is passed in.',
     code:
-      'multiply = (a, b = 1) {\n return a * b;\n}\nconsole.log(multiply(5));\n// Expected output: 5\nconsole.log(multiply(5, 3));\n// Expected output: 15',
+      'multiply = (a, b = 1) => {\n return a * b;\n}\nconsole.log(multiply(5));\n// Expected output: 5\nconsole.log(multiply(5, 3));\n// Expected output: 15',
   },
   {
     category: 'Template Strings',
