@@ -28,7 +28,7 @@ const data = [
     slug: 'default-function-arguments',
     info: 'Sets the default argument if nothing is passed in.',
     code:
-      'function multiply(a, b = 1) {\n return a * b;\n}\nconsole.log(multiply(5));\n// Expected output: 5',
+      'multiply = (a, b = 1) {\n return a * b;\n}\nconsole.log(multiply(5));\n// Expected output: 5\nconsole.log(multiply(5, 3));\n// Expected output: 15',
   },
   {
     category: 'Template Strings',
@@ -37,7 +37,7 @@ const data = [
     info:
       'Interpolates variables inside of strings with backticks and brackets.',
     code:
-      "const name = 'Melanie';\nconsole.log(`Hello, ${name}!`);\n//Expected output: Hello, Melanie!",
+      "const name = 'Melanie';\nconsole.log(`Hello, ${name}!`);\n// Expected output: Hello, Melanie!",
   },
   {
     category: 'Template Strings',
@@ -55,7 +55,7 @@ const data = [
     info:
       'Array.from takes something that is array-ish and turns it into a true array. Array.of creates an array from every single argument passed to it.',
     code:
-      "// Array.from\nconst navItems = document.querySelector('.nav li');\nconst navItemsArray = Array.from(navItems);\n\n// Array.of\nconst ages =  Array.of(5, 15, 20, 3);",
+      "// Array.from\nconst navItems = document.querySelector('.nav li');\nconst navItemsArray = Array.from(navItems);\n\n// Array.of\nconst ages = Array.of(5, 15, 20, 3);",
   },
   {
     category: 'Array Methods',
@@ -64,7 +64,7 @@ const data = [
     info:
       'Array.find returns the value of the first element that satisfies x condition. Array.findIndex returns the index of the first element that satisfies x condition.',
     code:
-      'const ids = [1, 2, 3, 4];\n\nfind = (id) => {\n ...\n console.log(`${id} has been found`);\n}\nconsole.log(ids.find(2));\n// ID of 2 has been found\n\n\ndelete = (id) => {\n ...\n console.log(`${id} has been deleted`);\n}\nconsole.log(ids.findIndex(3));\n// ID of 3 has been deleted',
+      'const ids = [5, 45, 30];\n\n// Array.find\nconst find = ids.find(x => x <= 10);\nconsole.log(find);\n// Expected output: 5\n\n// Array.findIndex\nconst find = ids.findIndex(x => x >= 40);\nconsole.log(find);\n// Expected output: 1',
   },
   {
     category: 'String Methods',
@@ -73,7 +73,7 @@ const data = [
     info:
       'Determines if a string starts with/ends with/includes specified character(s). Can skip characters if needed. Case sensitive. Also, repeat a string x number of times.',
     code:
-      "const str = 'Coding is awesome';\nconsole.log(str.startsWith('C'));\n// Returns true\n\nconsole.log(str.endsWith('a', 6));\n// Returns false\n\nconsole.log(str.includes('awe'));\n// Returns true\n\nconst rock = '🚀';\nconsole.log(rock.repeat(10));\n// Expected output: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀",
+      "const str = 'Coding is awesome';\n\nconsole.log(str.startsWith('C'));\n// Returns true\n\nconsole.log(str.endsWith('a', 6));\n// Returns false\n\nconsole.log(str.includes('awe'));\n// Returns true\n\nconst rock = '🚀';\nconsole.log(rock.repeat(10));\n// Expected output: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀",
   },
   {
     category: 'Destructuring',
@@ -82,7 +82,7 @@ const data = [
     info:
       'Allows properties of objects to be extracted into their own variables.',
     code:
-      "const obj = { title: 'Dr', name: 'McDreamy'};\ngiveLove = ({ title, name} = obj) => {\n console.log(`${title}${name} is sexy`);\n}\ngiveLove(obj);\n// Expected output: Dr McDreamy is sexy",
+      "const obj = { title: 'Dr', name: 'McDreamy'};\n\ngiveLove = ({ title, name }) => {\n console.log(`${title} ${name} is sexy`);\n}\ngiveLove(obj);\n\n// Expected output: Dr McDreamy is sexy",
   },
   {
     category: 'Destructuring',
@@ -107,7 +107,7 @@ const data = [
     slug: 'for-of',
     info:
       'Can be used for any type of data except objects. Able to use break and continue.',
-    code: 'for ( const item of items) {\nconsole.log(item);\n}',
+    code: 'for (const item of items) {\n console.log(item);\n}',
   },
   {
     category: 'Operators and Parameters',
