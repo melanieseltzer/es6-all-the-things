@@ -28,7 +28,7 @@ const data = [
     slug: 'default-function-arguments',
     info: 'Sets the default argument if nothing is passed in.',
     code:
-      'multiply = (a, b = 1) => {\n return a * b;\n}\nconsole.log(multiply(5));\n// Expected output: 5\nconsole.log(multiply(5, 3));\n// Expected output: 15',
+      'function multiply(a, b = 1) {\n return a * b;\n}\n\nconsole.log(multiply(5));\n// Expected output: 5\nconsole.log(multiply(5, 3));\n// Expected output: 15',
   },
   {
     category: 'Template Strings',
@@ -46,7 +46,7 @@ const data = [
     info:
       'Tags allow you to parse template literals with a function. You’ll get access to all the string values as the first argument (in an array), and the interpolated expression(s) as the second argument. If the amount of expressions are unknown, ...rest can be used. The styled-components package utilizes TTL.',
     code:
-      "const name = 'Melanie';\nconst messages = 5;\n\nhello = (strings, ...values) => {\n console.log('Strings:', strings);\n console.log('Values:' values);\n}\n\nconst welcome = hello`Hello, ${name}! You have ${messages} new messages.`\n\n// Strings: ['Hello, ', '! You have ', ' new messages.']\n// Values: ['Melanie', '5']",
+      "const name = 'Melanie';\nconst messages = 5;\n\nfunction hello(strings, ...values) {\n console.log('Strings:', strings);\n console.log('Values:' values);\n}\n\nconst welcome = hello`Hello, ${name}! You have ${messages} new messages.`\n// Strings: ['Hello, ', '! You have ', ' new messages.']\n// Values: ['Melanie', '5']",
   },
   {
     category: 'Array Methods',
@@ -55,7 +55,7 @@ const data = [
     info:
       'Array.from takes something that is array-ish and turns it into a true array. Array.of creates an array from every single argument passed to it.',
     code:
-      "// Array.from\nconst navItems = document.querySelector('.nav li');\nconst navItemsArray = Array.from(navItems);\n\n// Array.of\nconst ages = Array.of(5, 15, 20, 3);",
+      "// Array.from\nconst navItems = document.querySelectorAll('.nav li');\nconst navItemsArray = Array.from(navItems);\n\n// Array.of\nconst ages = Array.of(5, 15, 20, 3);",
   },
   {
     category: 'Array Methods',
@@ -82,7 +82,7 @@ const data = [
     info:
       'Allows properties of objects to be extracted into their own variables.',
     code:
-      "const obj = { title: 'Dr', name: 'McDreamy'};\n\ngiveLove = ({ title, name }) => {\n console.log(`${title} ${name} is sexy`);\n}\ngiveLove(obj);\n\n// Expected output: Dr McDreamy is sexy",
+      "const obj = { title: 'Dr', name: 'McDreamy'};\n\nfunction giveLove({ title, name }) {\n console.log(`${title} ${name} is sexy`);\n}\n\nconsole.log(giveLove(obj));\n// Expected output: Dr McDreamy is sexy",
   },
   {
     category: 'Destructuring',
@@ -124,7 +124,7 @@ const data = [
     info:
       'Represents an indefinite number of arguments as an array. Used in functions and destructuring.',
     code:
-      'multiply = (rate, ...numbers) => {\n return numbers.map(number => number * rate);\n}\nconsole.log(multiply(2, 10, 20, 30));\n// Expected output: 20, 40, 60',
+      'function multiply(rate, ...numbers) {\n return numbers.map(number => number * rate);\n}\n\nconsole.log(multiply(2, 10, 20, 30));\n// Expected output: 20, 40, 60',
   },
 ];
 
