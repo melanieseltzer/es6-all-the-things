@@ -13,7 +13,7 @@ class Snippet extends Component {
   constructor(props) {
     super();
   }
-  renderSnippet({ title, slug, info, code } = snippet) {
+  renderSnippet({ title, slug, info, code }) {
     return (
       <div className="box" key={title}>
         <h4 id={slug} className="title is-4">

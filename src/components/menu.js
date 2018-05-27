@@ -8,7 +8,7 @@ class Menu extends Component {
     super();
   }
 
-  renderMenu({ slug, title } = menu) {
+  renderMenu({ slug, title }) {
     return (
       <li key={title}>
         <a href={'#' + slug}>{title}</a>
