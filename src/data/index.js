@@ -44,8 +44,9 @@ const data = [
     title: 'Tagged Template Literals',
     slug: 'template-literals',
     info:
-      'Tags are normal functions, which have the ability to interpret and process the template. styled-components utilizes TTL.',
-    code: 'const Styled = styled.div`\n padding: 4em;\n background: red;\n`;',
+      'Tags allow you to parse template literals with a function. You’ll get access to all the string values as the first argument (in an array), and the interpolated expression(s) as the second argument. If the amount of expressions are unknown, ...rest can be used. The styled-components package utilizes TTL.',
+    code:
+      "const name = 'Melanie';\nconst messages = 5;\n\nhello = (strings, ...values) => {\n console.log('Strings:', strings);\n console.log('Values:' values);\n}\n\nconst welcome = hello`Hello, ${name}! You have ${messages} new messages.`\n\n// Strings: ['Hello, ', '! You have ', ' new messages.']\n// Values: ['Melanie', '5']",
   },
   {
     category: 'Array Methods',
