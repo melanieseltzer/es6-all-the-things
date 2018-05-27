@@ -126,6 +126,14 @@ const data = [
     code:
       'function multiply(rate, ...numbers) {\n return numbers.map(number => number * rate);\n}\n\nconsole.log(multiply(2, 10, 20, 30));\n// Expected output: 20, 40, 60',
   },
+  {
+    category: 'Operators and Parameters',
+    title: 'Defines property on an object',
+    slug: 'optional-props',
+    info: 'Optional property definition with object spread',
+    code:
+      `const usCitizen = true;\nconst employed = false;\nconst person = {\n name: \'Bob\',\n ...usCitizen && { ssn: \'078-05-1120\' },\n ...employed ? { employer: \'Acme Corp\'}\n${' '.repeat(13)}: { cv: \'http://bob.com/cv\' }\n};`
+  }
 ];
 
 export default data;
