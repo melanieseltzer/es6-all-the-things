@@ -23,7 +23,7 @@ class IndexPage extends Component {
   render() {
     return (
       <div className="columns">
-        <div className="column is-3">
+        <div className="column is-3 sticky-menu">
           <aside className="is-medium menu">
             {uniqueCategories.map(menu => this.renderElement('Menu', menu))}
           </aside>
