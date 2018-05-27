@@ -18,9 +18,9 @@ const data = [
     title: 'Arrow Functions',
     slug: 'arrow-functions',
     info:
-      "Cannot be named. If the callback is a one-liner (only returning something) you can do implicit return. Doesn't re-bind the value of this. If there's only one parameter the braces can be left off.",
+      "Cannot be named. Doesn't re-bind the value of this. If there's only one parameter the parentheses can be left off. If the callback is a one-liner (only returning something) you can do implicit return, however, if the return is an object literal, you must wrap in parentheses.",
     code:
-      'const arrow = (dart, bow) => console.log("I\'m an implicit return!");\nconst arrow = dart => console.log("I have only one parameter");\nconst arrow = () => console.log("I don\'t have any parameters");',
+      "const arrow = (dart, bow) => console.log('Implicit return');\nconst arrow = dart => console.log('One parameter');\nconst arrow = () => console.log('No parameters');\nconst arrow = () => ({ foo: 'bar' }); // Returns an object literal",
   },
   {
     category: 'Functions',
@@ -28,7 +28,7 @@ const data = [
     slug: 'default-function-arguments',
     info: 'Sets the default argument if nothing is passed in.',
     code:
-      'function multiply(a, b = 1) {\n return a * b;\n}\n\nconsole.log(multiply(5));\n// Expected output: 5\nconsole.log(multiply(5, 3));\n// Expected output: 15',
+      'function multiply(a, b = 1) {\n return a * b;\n}\n\nconsole.log(multiply(5));\n// 5\nconsole.log(multiply(5, 3));\n// 15',
   },
   {
     category: 'Template Strings',
@@ -37,7 +37,7 @@ const data = [
     info:
       'Interpolates variables inside of strings with backticks and brackets.',
     code:
-      "const name = 'Melanie';\nconsole.log(`Hello, ${name}!`);\n// Expected output: Hello, Melanie!",
+      "const name = 'Melanie';\nconsole.log(`Hello, ${name}!`);\n// Hello, Melanie!",
   },
   {
     category: 'Template Strings',
@@ -64,7 +64,7 @@ const data = [
     info:
       'Array.find returns the value of the first element that satisfies x condition. Array.findIndex returns the index of the first element that satisfies x condition.',
     code:
-      'const ids = [5, 45, 30];\n\n// Array.find\nconst find = ids.find(x => x <= 10);\nconsole.log(find);\n// Expected output: 5\n\n// Array.findIndex\nconst find = ids.findIndex(x => x >= 40);\nconsole.log(find);\n// Expected output: 1',
+      'const ids = [5, 45, 30];\n\n// Array.find\nconst find = ids.find(x => x <= 10);\nconsole.log(find);\n// 5\n\n// Array.findIndex\nconst find = ids.findIndex(x => x >= 40);\nconsole.log(find);\n// 1',
   },
   {
     category: 'String Methods',
@@ -73,24 +73,33 @@ const data = [
     info:
       'Determines if a string starts with/ends with/includes specified character(s). Can skip characters if needed. Case sensitive. Also, repeat a string x number of times.',
     code:
-      "const str = 'Coding is awesome';\n\nconsole.log(str.startsWith('C'));\n// Returns true\n\nconsole.log(str.endsWith('a', 6));\n// Returns false\n\nconsole.log(str.includes('awe'));\n// Returns true\n\nconst rock = '🚀';\nconsole.log(rock.repeat(10));\n// Expected output: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀",
+      "const str = 'Coding is awesome';\n\nconsole.log(str.startsWith('C'));\n// Returns true\n\nconsole.log(str.endsWith('a', 6));\n// Returns false\n\nconsole.log(str.includes('awe'));\n// Returns true\n\nconst rock = '🚀';\nconsole.log(rock.repeat(10));\n// 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀",
   },
   {
     category: 'Destructuring',
-    title: 'Destructuring Objects',
+    title: 'Objects',
     slug: 'destructure-objects',
     info:
-      'Allows properties of objects to be extracted into their own variables.',
+      'Allows properties of objects to be extracted into their own variables. You can also assign the props to a different name upon destructuring.',
     code:
-      "const obj = { title: 'Dr', name: 'McDreamy'};\n\nfunction giveLove({ title, name }) {\n console.log(`${title} ${name} is sexy`);\n}\n\nconsole.log(giveLove(obj));\n// Expected output: Dr McDreamy is sexy",
+      "const obj = { title: 'Dr', name: 'McDreamy'};\nfunction giveLove({ title, name }) {\n console.log(`${title} ${name} is sexy`);\n}\nconsole.log(giveLove(obj));\n// Dr McDreamy is sexy\n\n// Renaming props\nconst user = { theName: 'Melanie' };\nconst { theName: name } = user;\nconsole.log(name);\n// Melanie",
   },
   {
     category: 'Destructuring',
-    title: 'Destructuring Arrays',
-    slug: 'destructuring-arrays',
-    info: 'Allows array index values to be extracted into their own variables.',
+    title: 'Nested Objects',
+    slug: 'destructure-nested-objects',
+    info: 'Nested objects can also be destructured.',
     code:
-      "const arr = ['Melanie', 1337];\nconst [name, coolness] = arr;\nconsole.log(`${name} is ${coolness} 😎`);\n// Expected output: Melanie is 1337 😎",
+      "let user = {\n education: {\n  degree: {\n   name: 'Bachelor',\n   field: 'Multimedia'\n  },\n  country: 'Australia'\n }\n};\n\nlet {\n education: {\n  degree: {\n   name,\n   field \n  },\n  country\n }\n} = user;\n\nconsole.log(`Studied ${name} of ${field} in ${country}`);\n// Studied Bachelor of Multimedia in Australia",
+  },
+  {
+    category: 'Destructuring',
+    title: 'Arrays',
+    slug: 'destructuring-arrays',
+    info:
+      "Allows array index values to be extracted into their own variables. You can ignore values that you're not interested in.",
+    code:
+      "const arr = ['Melanie', 1337];\n\nconst [name, coolness] = arr;\nconsole.log(`${name} is ${coolness} 😎`);\n// Melanie is 1337 😎\n\n// Ignore values\nconst [, coolness] = arr;\nconsole.log(coolness);\n// 1337",
   },
   {
     category: 'Destructuring',
@@ -124,7 +133,7 @@ const data = [
     info:
       'Represents an indefinite number of arguments as an array. Used in functions and destructuring.',
     code:
-      'function multiply(rate, ...numbers) {\n return numbers.map(number => number * rate);\n}\n\nconsole.log(multiply(2, 10, 20, 30));\n// Expected output: 20, 40, 60',
+      'function multiply(rate, ...numbers) {\n return numbers.map(number => number * rate);\n}\n\nconsole.log(multiply(2, 10, 20, 30));\n// 20, 40, 60',
   },
 ];
 
