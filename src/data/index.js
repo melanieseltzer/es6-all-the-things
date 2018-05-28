@@ -1,10 +1,18 @@
 const data = [
   {
     category: 'New Variables',
-    title: 'const',
-    slug: 'const',
-    info: 'Block-scoped. Cannot be re-assigned. Not immutable.',
+    title: 'const with primitive values',
+    slug: 'const-primitive',
+    info: 'Block-scoped. Cannot be re-assigned. Primitive values are immutable.',
     code: "const test = 'test';",
+  },
+  {
+    category: 'New Variables',
+    title: 'const with reference values',
+    slug: 'const-reference',
+    info: 'Block-scoped. Cannot be re-assigned. Reference values are mutable.',
+    code:
+      "const test = { message: 'Hello World' };\ntest.message = 'Goodbye World';",
   },
   {
     category: 'New Variables',
