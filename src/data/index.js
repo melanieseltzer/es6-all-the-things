@@ -124,7 +124,7 @@ const data = [
     slug: 'spread',
     info: 'Takes every single item from an iterable and expands it.',
     code:
-      "const people = ['Sara'];\nconst cats = ['Callie'];\nconst myFamily = [...people, ...cats];\n// myFamily is ['Sara', 'Callie']",
+      "const people = ['Sara', 'John'];\nconst cats = ['Callie'];\nconst myFamily = [...people, ...cats];\nconsole.log(myFamily);\n// myFamily is ['Sara', 'John', 'Callie']",
   },
   {
     category: 'Operators and Parameters',
