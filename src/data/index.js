@@ -140,9 +140,9 @@ const data = [
     title: 'Map, Map.set(), Map.get(), Map.size()',
     slug: 'global-objects-map',
     info:
-      'Map, not to be confused with Array.prototype.map, holds key-value pairs. While Map\'s and object-literals have their similarities, they also have some key differences.',
+      'Map, not to be confused with Array.prototype.map(), holds key-value pairs. While Map\'s and object-literals have their similarities, they also have some key differences.',
     code:
-      'const myMap = new Map(); // creates a new instance of a Map object\nconst keyObj = {};\n\nconsole.log(myMap); // Map(0) {}\n\n// unlike object-literals, a Maps keys/values can be anything\nmyMap.set(\'string\', \'they can be strings\')\nmyMap.set(1, \'or integers\')\nmyMap.set(true, \'...booleans\')\nmyMap.set(keyObj, \'even objects?\')\n\nconsole.log(myMap.size) // 4\n\nmyMap.get(keyObj) // "even objects?"',
+      'const myMap = new Map(); // creates a new instance of a Map object\nconst keyObj = {};\n\nconsole.log(myMap); // Map(0) {}\n\n// unlike object-literals, a Map\'s keys/values can be anything\nmyMap.set(\'string\', \'they can be strings\')\nmyMap.set(1, \'or integers\')\nmyMap.set(true, \'...booleans\')\nmyMap.set(keyObj, \'even objects?\')\n\nconsole.log(myMap.size) // 4\n\nmyMap.get(keyObj) // "even objects?"',
   },
 ];
 
