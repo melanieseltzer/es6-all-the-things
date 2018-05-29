@@ -8,6 +8,24 @@ A comprehensive cheat sheet of everything ES6. Categorized and easy to refer bac
 
 [View Cheat Sheet](https://melanieseltzer.github.io/es6-all-the-things/)
 
+## Local Development
+
+Install dependencies:
+
+`npm install`
+
+Run the local dev server:
+
+`gatsby develop`
+
+Build for production:
+
+`gatsby build`
+
+Serve the production build for testing:
+
+`gatsby serve`
+
 ## Contributing
 
-Contributions welcome! Please refer to CONTRIBUTING.md.
+Contributions welcome! Please refer to [CONTRIBUTING.md](https://github.com/melanieseltzer/es6-all-the-things/blob/master/CONTRIBUTING.md).
