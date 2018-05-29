@@ -77,3 +77,24 @@ pre,
   background: inherit;
   margin: inherit;
 }
+
+// back to top button
+.back-to-top {
+  background: linear-gradient(to left, #da4453, #89216b);
+  border-radius: 100%;
+  bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  opacity: 0.5;
+  padding: 5px;
+  position: fixed;
+  right: 30px;
+  transition: opacity .15s;
+  width: 42px;
+
+  &:hover {
+    opacity: 1;
+  }
+}
