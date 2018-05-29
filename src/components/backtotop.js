@@ -12,7 +12,10 @@ const BackToTop = () => {
   };
   
   return (
-    <div className="back-to-top" onClick={ () => handleBackToTop() } onScroll={ () => alert() } >
+    <div
+      className="back-to-top"
+      onClick={ () => handleBackToTop() }
+    >
       <FontAwesomeIcon
         icon="arrow-up"
         size="2x"
