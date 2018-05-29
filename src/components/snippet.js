@@ -23,7 +23,10 @@ class Snippet extends Component {
           <span className="icon has-text-warning">
             <FontAwesomeIcon icon="info-circle" />
           </span>
-          <div className="message-body">{info}</div>
+          <div
+            className="message-body"
+            dangerouslySetInnerHTML={{ __html: info }}
+          />
         </article>
         <pre>
           <code className="language-javascript">{code}</code>
