@@ -3,6 +3,7 @@ import Link from 'gatsby-link';
 
 import Menu from '../components/menu';
 import Snippet from '../components/snippet';
+import BackToTop from '../components/backtotop';
 
 import data from '../data';
 
@@ -34,6 +35,9 @@ class IndexPage extends Component {
             this.renderElement('Snippet', snippet)
           )}
         </div>
+
+        <BackToTop />
+
       </div>
     );
   }
