@@ -3,8 +3,18 @@ const data = [
     category: 'New Variables',
     title: 'const with primitive values',
     slug: 'const-primitive',
-    info: 'Block-scoped. Cannot be re-assigned. Primitive values are immutable.',
+    info:
+      'Block-scoped. Cannot be re-assigned. Primitive values are immutable.',
     code: "const test = 'test';",
+  },
+  {
+    category: 'Promises',
+    title: 'Promises',
+    slug: 'promises',
+    info:
+      "A promise represents the eventual result of an asynchronous operation. It can be pending (neither fulfilled nor rejected), fulfilled (operation completed successfully), or rejected (operation failed). If either fulfilled or rejected, the associated handlers from a promise's then method are called.",
+    code:
+      '// Creating the promise\nconst p = new Promise(function(resolve, reject) {\n if (/* condition */) {\n  resolve(/* value */);\n  } else { \n  reject(/* reason */) \n }\n}); \n\n// Consuming the promise\np\n .then((data) => console.log(data))\n .catch((err) => console.log(err));',
   },
   {
     category: 'New Variables',
@@ -148,9 +158,9 @@ const data = [
     title: 'Map, Map.set(), Map.get(), Map.size()',
     slug: 'global-objects-map',
     info:
-      'Map, not to be confused with Array.prototype.map(), holds key-value pairs. While Map\'s and object-literals have their similarities, they also have some key differences.',
+      "Map, not to be confused with Array.prototype.map(), holds key-value pairs. While Map's and object-literals have their similarities, they also have some key differences.",
     code:
-      'const myMap = new Map(); // creates a new instance of a Map object\nconst keyObj = {};\n\nconsole.log(myMap); // Map(0) {}\n\n// unlike object-literals, a Map\'s keys/values can be anything\nmyMap.set(\'string\', \'they can be strings\')\nmyMap.set(1, \'or integers\')\nmyMap.set(true, \'...booleans\')\nmyMap.set(keyObj, \'even objects?\')\n\nconsole.log(myMap.size) // 4\n\nmyMap.get(keyObj) // "even objects?"',
+      "const myMap = new Map(); // creates a new instance of a Map object\nconst keyObj = {};\n\nconsole.log(myMap); // Map(0) {}\n\n// unlike object-literals, a Map's keys/values can be anything\nmyMap.set('string', 'they can be strings')\nmyMap.set(1, 'or integers')\nmyMap.set(true, '...booleans')\nmyMap.set(keyObj, 'even objects?')\n\nconsole.log(myMap.size) // 4\n\nmyMap.get(keyObj) // \"even objects?\"",
   },
 ];
 
