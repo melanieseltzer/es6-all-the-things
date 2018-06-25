@@ -1,12 +1,12 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
-import fontawesome from '@fortawesome/fontawesome';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import faJs from '@fortawesome/fontawesome-free-brands/faJs';
-import faCode from '@fortawesome/fontawesome-free-solid/faCode';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faJs } from '@fortawesome/free-brands-svg-icons';
+import { faCode } from '@fortawesome/free-solid-svg-icons';
 
-fontawesome.library.add(faJs, faCode);
+library.add(faJs, faCode);
 
 const Header = ({ siteTitle }) => (
   <section className="hero is-medium is-primary">

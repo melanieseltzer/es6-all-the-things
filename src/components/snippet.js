@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Link from 'gatsby-link';
 import Prism from 'prismjs';
-import fontawesome from '@fortawesome/fontawesome';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import faInfoCircle from '@fortawesome/fontawesome-free-solid/faInfoCircle';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 import data from '../data';
 
-fontawesome.library.add(faInfoCircle);
+library.add(faInfoCircle);
 
 class Snippet extends Component {
   constructor(props) {
