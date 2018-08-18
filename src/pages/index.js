@@ -37,7 +37,6 @@ class IndexPage extends Component {
         </div>
 
         <BackToTop />
-
       </div>
     );
   }

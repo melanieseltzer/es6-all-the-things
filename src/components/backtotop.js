@@ -10,18 +10,12 @@ const BackToTop = () => {
   const handleBackToTop = () => {
     window.scroll({ top: 0, behavior: 'smooth' });
   };
-  
+
   return (
-    <div
-      className="back-to-top"
-      onClick={ () => handleBackToTop() }
-    >
-      <FontAwesomeIcon
-        icon="arrow-up"
-        size="2x"
-      />
+    <div className="back-to-top" onClick={() => handleBackToTop()}>
+      <FontAwesomeIcon icon="arrow-up" size="2x" />
     </div>
   );
-}
- 
+};
+
 export default BackToTop;

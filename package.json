@@ -19,14 +19,14 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
-    "@fortawesome/fontawesome-svg-core": "^1.2.0",
-    "@fortawesome/free-brands-svg-icons": "^5.1.0",
-    "@fortawesome/free-solid-svg-icons": "^5.1.0",
-    "@fortawesome/react-fontawesome": "^0.1.0",
-    "browserslist": "^3.2.8",
+    "@fortawesome/fontawesome-svg-core": "^1.2.2",
+    "@fortawesome/free-brands-svg-icons": "^5.2.0",
+    "@fortawesome/free-solid-svg-icons": "^5.2.0",
+    "@fortawesome/react-fontawesome": "^0.1.2",
+    "browserslist": "^4.0.2",
     "bulma": "^0.7.1",
-    "gatsby": "^1.9.273",
-    "gatsby-link": "^1.6.45",
+    "gatsby": "^1.9.277",
+    "gatsby-link": "^1.6.46",
     "gatsby-plugin-postcss-sass": "^1.0.22",
     "gatsby-plugin-react-helmet": "^2.0.11",
     "gatsby-plugin-react-next": "^1.0.11",
@@ -34,9 +34,9 @@
     "react-helmet": "^5.2.0"
   },
   "devDependencies": {
-    "autoprefixer": "^8.6.3",
+    "autoprefixer": "^9.1.1",
     "gh-pages": "^1.2.0",
-    "prettier": "^1.13.6"
+    "prettier": "^1.14.2"
   },
   "keywords": [
     "gatsby",
