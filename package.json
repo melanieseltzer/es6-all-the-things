@@ -25,7 +25,7 @@
     "@fortawesome/react-fontawesome": "^0.1.2",
     "browserslist": "^4.0.2",
     "bulma": "^0.7.1",
-    "gatsby": "^1.9.277",
+    "gatsby": "^2.0.0",
     "gatsby-link": "^1.6.46",
     "gatsby-plugin-postcss-sass": "^1.0.22",
     "gatsby-plugin-react-helmet": "^2.0.11",
